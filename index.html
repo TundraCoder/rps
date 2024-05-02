@@ -9,27 +9,32 @@
 
     <script>
 
+        //Userprompt
+        let userInput = prompt("Select: Rock, Paper, Scissors");
+        let Rock = 1.0;
+        let Paper = 2.0;
+        let Scissors = 3.0;
+
+
+        //Random number generator
         function computerChoice() {
         return Math.floor(Math.random() * 3 + 1);
-
          }
 
+         //Assign rock||paper||scissors to random number
          switch (computerChoice()) {
             case 1:
-                console.log("Rock");
+                alert("Rock");
                 break;
             case 2:
-                console.log("Paper");
+                alert("Paper");
                 break;
             case 3:
-                console.log("Scissors")
+                alert("Scissors");
                 break;
         }
 
-       
-       
-      /*   console.log(computerChoice()); */
-   
+
 
     </script>
 

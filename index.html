@@ -9,57 +9,27 @@
 
     <script>
 
-/*         let userInput = prompt("Select: Rock, Paper, Scissors");
-        
-
-        
-        //Random number generator
-        function computerChoice() {
-        return Math.floor(Math.random() * 3 + 1);
-         }
-
-         //Assign rock||paper||scissors to random number
-         switch (computerChoice()) {
-            case 1:
-                alert("Computer throws Rock");
+        let userInput = prompt("Select: Rock, Paper, Scissors");
+        switch(userInput) {
+            case "Rock":
+                userInput = 1;
                 break;
-            case 2:
-                alert("Computer throws Paper");
+            case "Paper":
+                userInput = 2;
                 break;
-            case 3:
-                alert("Computer throws Scissors");
-                break;
-        } */
-
-        let userInput;
-        let computerChoice;
-
-        userInput = "Rock";
-        computerChoice = "1";
-
-        switch(userInput === "Rock") {
-            case computerChoice === "1":
-                console.log("Draw");
-                break;
-            case computerChoice === "2":
-                console.log("You Lose");
-                break;
-            case computerChoice === "z":
-                console.log("You Win"); 
+            case "Scissors":
+                userInput = 3;
                 break;
         }
+
+        console.log(userInput);
+        
+        let compThrow = Math.floor(Math.random()*3+1);
+        console.log(compThrow);
+
+      
+
  
-        
-        
-            
-            
-        
-
-
-
-
-        
-
     </script>
 
  

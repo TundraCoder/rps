@@ -21,29 +21,32 @@
          //Assign rock||paper||scissors to random number
          switch (computerChoice()) {
             case 1:
-                alert("Rock");
+                alert("Computer throws Rock");
                 break;
             case 2:
-                alert("Paper");
+                alert("Computer throws Paper");
                 break;
             case 3:
-                alert("Scissors");
+                alert("Computer throws Scissors");
                 break;
         } */
 
-        let userName;
+        let userInput;
         let computerChoice;
 
-        userName = "x";
-        computerChoice = "y";
+        userInput = "Rock";
+        computerChoice = "1";
 
-        if(userName === "x") {
-            if(computerChoice === "x")
-                console.log("Draw")
-            if(computerChoice ==="y")
-                console.log("You Win")
-            if(computerChoice === "z")
-            console.log("You Lose")
+        switch(userInput === "Rock") {
+            case computerChoice === "1":
+                console.log("Draw");
+                break;
+            case computerChoice === "2":
+                console.log("You Lose");
+                break;
+            case computerChoice === "z":
+                console.log("You Win"); 
+                break;
         }
  
         

@@ -9,6 +9,14 @@
     
     <script>
 
+        let playerScore = 0;
+        let compScore = 0;
+
+
+    function playGame(){
+
+
+
         function getComputerChoice() {
             let compChoice = Math.floor(Math.random()* 3 + 1);
             
@@ -17,25 +25,76 @@
             }
                 else if(compChoice === 2){
                 return "paper";
-            }
+            }   
                 else{
                 return "scissors";
             }
-        }
+      }
+
+        let compChoice = getComputerChoice();
+        compChoice;
 
         function getHumanChoice() {
             let userInput = prompt("Please select: Rock Paper or Scissors").toLowerCase();
             return userInput;
         }
-        console.log(getHumanChoice());
 
-        
+        let userInput = getHumanChoice();
+        userInput;
 
-        
-    
-    
 
+        function playRound(humanChoice, computerChoice) {
+            
+            if(humanChoice === computerChoice){
+                return alert("Draw!")
+            }
+            else if (humanChoice === "rock" && computerChoice === "paper"){
+                return alert("Computer used Paper:  You Lose!"), compScore +=1;
+            }
+            else if (humanChoice === "rock" && computerChoice === "scissors"){
+                return alert("Computer used Scissors:  You Win!!!"), playerScore +=1;
+            }
+            else if (humanChoice === "paper" && computerChoice === "rock"){
+                return alert("Computer used Rock:  You Win!!!"), playerScore +=1;
+            }
+            else if (humanChoice === "paper" && computerChoice === "scissors"){
+                return alert("Computer used Paper:  You Lose!"), compScore +=1;
+            }
+            else if (humanChoice === "scissors" && computerChoice === "rock"){
+                return alert("Computer used Rock:  You Lose!"), compScore +=1;
+            }
+            else if (humanChoice === "scissors" && computerChoice === "paper"){
+                return alert("Computer used Paper:  You Win!!!"), playerScore +=1;
+            }
+
+        }
         
+        playRound(userInput, compChoice);
+    }
+    playGame();
+    console.log(playerScore, compScore);
+    playGame();
+    console.log(playerScore, compScore);
+    playGame();
+    console.log(playerScore, compScore);
+    playGame();
+    console.log(playerScore, compScore);
+    playGame();
+    console.log(playerScore, compScore);
+
+    if(playerScore > compScore){
+        alert("YOU WIN!!!")
+    }
+    else if(playerScore < compScore){
+        alert("You Lose...Try again")
+    }
+
+
+
+  
+
+
+
 
 
 

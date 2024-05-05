@@ -6,33 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-
+    
     <script>
 
-        let userInput = prompt("Select: Rock, Paper, Scissors");
-        switch(userInput) {
-            case "Rock":
-                userInput = 1;
-                break;
-            case "Paper":
-                userInput = 2;
-                break;
-            case "Scissors":
-                userInput = 3;
-                break;
+        function getComputerChoice() {
+            let compChoice = Math.floor(Math.random()* 3 + 1);
+            
+            if(compChoice === 1){
+                return "rock";
+            }
+                else if(compChoice === 2){
+                return "paper";
+            }
+                else{
+                return "scissors";
+            }
         }
 
-        console.log(userInput);
+        function getHumanChoice() {
+            let userInput = prompt("Please select: Rock Paper or Scissors");
+            return userInput;
+        }
+
+    getHumanChoice();
+
+
         
-        let compThrow = Math.floor(Math.random()*3+1);
-        console.log(compThrow);
+    
+    
 
-      
+        
 
- 
+
+
+
     </script>
 
- 
-    
 </body>
 </html>
